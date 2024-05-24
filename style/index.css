@@ -4,16 +4,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration-line: none;
+    color:var(--bgtextcolor)
+    
 }
 :root{
     --bgprimary:#9F3647;
     --bgsecundary:#181419;
     --bgtextcolor:#ffffff;
 }
-a{
-    text-decoration: none;
-    color:var(--bgtextcolor)
-}
+
 
 @keyframes logo{
     0%{
@@ -40,18 +40,20 @@ body{
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    
+}
 
-
-    header{
+header{
         background-color: var(--bgprimary);
-        height: 10vh;
+        height: 15vh;
         
         nav{
             display:flex;
             justify-content: space-between;
             height: 100%;
-            margin: 0 2rem;
+            margin: 0 3rem;
             align-items: center;
+
         .logo{
             height: 50%;
             display:flex;
@@ -94,11 +96,17 @@ body{
         }
 
         }
+        .header a, .main a, .footer a{
+            text-decoration-line: none;
+            color:var(--bgtextcolor)
+        }
     
 
     .main{
+        
+        background-color: rgb(68,67,67);
         .principal{
-            height: 90vh;
+            height: 100vh;
             background-image: url(../asset/banner-bg.jpg);
             background-repeat: no-repeat;
             background-position: center;
@@ -110,8 +118,7 @@ body{
             flex-direction: column;
             justify-content:center;
             gap:1.5rem;
-            padding:0 20%;
-
+            padding:10px 10px;
             h1{
                 font-size: 2.5rem;
                 text-align: center;
@@ -241,6 +248,10 @@ body{
         -o-transition:all .9s ease; 
         -ms-transition:all .9s ease;
         
+    }
+    .carouselFotos{
+        padding-top:40px;
+        padding-bottom: 20px;
     }
     .footer{
         background-color: var(--bgprimary);

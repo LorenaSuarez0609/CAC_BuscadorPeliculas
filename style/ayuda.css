@@ -3,3 +3,18 @@
     text-align: center;
     padding-bottom: 30px;
 }
+.container{
+    margin: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+    justify-content: center;
+    
+}
+.container h1{
+    padding-bottom: 20px;
+}
+
+.container p{
+    text-align: justify;
+    padding-bottom: 20px;
+}
