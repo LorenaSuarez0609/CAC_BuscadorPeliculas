@@ -19,38 +19,35 @@
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     width: 30rem;
-    height: 30rem;
+    height: 32rem;
     text-align: center;
-    border-radius: 5%;
-    
-    
+    border-radius: 10%;
 }
 .titulo-registrarse{
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
 }
 .name{
-height: 2rem;
-width: 15rem;
-font-size: 1.25rem;
-border-radius: 1rem;
-padding: 0 0.75rem;
-border: 2px solid white;
-background: transparent;
-text-align: center;
+    height: 2rem;
+    width: 15rem;
+    font-size: 0.75rem;
+    border-radius: 1rem;
+    padding: 0 0.75rem;
+    border: 2px solid white;
+    background: transparent;
+    text-align: center;
 }
 .casilla{
-margin: 20px;
+    margin: 20px;
 }
 .boton{
-width: 15rem;
-height:2rem;
-background: #fff;
-border: none;
-outline: none;
-border-radius: 40px;
-cursor: pointer;
-font-size: 16px;
-color: #333;
-
+    width: 15rem;
+    height:2rem;
+    background: #4f0101ee;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #a8a2a2;
 }
