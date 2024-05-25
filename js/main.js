@@ -55,3 +55,7 @@ function validar(formulario) {
     alert('se genero registro correctamente');
     return true;
 }
+
+function mostrarAlerta() {
+    Swal.fire("Se ha guardado tu confirmacion, Gracias!");
+}

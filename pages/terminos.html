@@ -20,8 +20,7 @@
             <ul>
                 <li><a href="./tendencias.html">Tendencia</a></li>
                 <li><a href="/pages/registro.html">Registrarse</a></li>
-                <li><a href="/pages/login.html">Loguin</a></li>
-
+                <li><a href="/pages/login.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -79,11 +78,10 @@
                 <input type="checkbox" id="acepto-terminos" name="acepto-terminos" required>
                 <label for="acepto-terminos">Acepto los Términos y Condiciones</label>
             </div>
-            <button type="submit">Aceptar y continuar</button>
+            <button class= "acepto-terminos" type="submit" onclick="mostrarAlerta()">Aceptar y continuar</button>
         </div>
         </section>
-        <section></section>
-        <section></section>
+        
     </main>
     <footer class="footer">
         <ul>
@@ -96,7 +94,8 @@
             <img src="../asset/flecha-hacia-arriba.png" alt="Flecha hacia arriba">
         </a>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/terminos.js"></script>
 </body>
 </html>
 

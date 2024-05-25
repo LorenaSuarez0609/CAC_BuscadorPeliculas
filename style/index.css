@@ -251,9 +251,9 @@ header{
         padding-top:40px;
         padding-bottom: 20px;
     }
-    .carousel-item {
-        padding-left: 20px;
-        padding-right: 20px;
+    .carousel-item{
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .carousel-item img{
         width:60vw;
@@ -293,7 +293,7 @@ header{
         }
 
     }
-}
+
 
 .main h2{
     font-size: 2rem;
@@ -323,7 +323,7 @@ header{
     
     }
 
-.container-boton button:hover, .aclamada-publico:hover, .titulo-aclamadas:hover{
+.container-boton button:hover, .aclamada-publico:hover, .titulo-aclamadas:hover, .aclamada-estrenos:hover{
     -webkit-transform:scale(1.25);
     -moz-transform:scale(1.25);
     -ms-transform:scale(1.25);
