@@ -206,6 +206,7 @@ header{
     }
         .aclamadas{
             padding-top:60px;
+            padding-bottom: 60px;
 
             .titulo-aclamadas{
                 display:flex;
@@ -223,26 +224,23 @@ header{
                 }
             }
             
-            .container-aclamadas{
-                    padding: 40px;
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-                    justify-items: center;
-                    justify-content: center;
-                    gap:3rem;
 
-                    img{
-                        width:10rem;
-                    }
-                    
-                }  
-            
         }
     } 
     .aclamada-publico{
-        padding-top: 60px;
+        padding-top: 10px;
         text-align: center;
         padding-bottom: 30px;
+        -webkit-transition:all .9s ease;
+        -moz-transition:all .9s ease;
+        -o-transition:all .9s ease; 
+        -ms-transition:all .9s ease;
+        
+    }
+    .aclamada-estrenos{
+        padding-top: 60px;
+        text-align: center;
+        padding-bottom: 40px;
         -webkit-transition:all .9s ease;
         -moz-transition:all .9s ease;
         -o-transition:all .9s ease; 
@@ -252,6 +250,15 @@ header{
     .carouselFotos{
         padding-top:40px;
         padding-bottom: 20px;
+    }
+    .carousel-item {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .carousel-item img{
+        width:60vw;
+        height: 80vh;
+
     }
     .footer{
         background-color: var(--bgprimary);
