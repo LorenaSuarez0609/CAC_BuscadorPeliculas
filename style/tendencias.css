@@ -1,16 +1,17 @@
 .container-tendencias{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-        justify-items: center;
-        justify-content: center;
-        gap:3rem;
-        padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 60px;
 
-        img{
-            width:10rem;
-        }
     }
 
+    .trailers iframe{
+        width: 60vw;
+        height: 70vh;
+    }
     .titulo-tendencias{
         padding-top: 30px;
         text-align: center;

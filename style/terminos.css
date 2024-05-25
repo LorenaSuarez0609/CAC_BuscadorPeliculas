@@ -1,13 +1,16 @@
-
-.container{
-    margin: 50px;
+.container-terminos{
+    margin: 0px;
+    padding-top: 20px;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
     
 }
-.container h1{
+.container-terminos h1{
     padding-bottom: 20px;
 }
 
-.container p{
+.container-terminos p{
     text-align: justify;
     padding-bottom: 20px;
 }
@@ -15,7 +18,7 @@
     padding-bottom: 20px;
 }
 
-.container button{
+.container-terminos button{
     border-radius: 5px;
     font-size: 16px;
     padding: 5px 5px 5px 5px;
