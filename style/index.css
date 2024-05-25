@@ -332,15 +332,19 @@ header{
 
 }
 
+.poster{
+    width: 10vh;
+    height: 20vw;
+}
 
-.img-contenedor img{
+.img-contenedor img, .poster{
     -webkit-transition:all .9s ease;
     -moz-transition:all .9s ease;
     -o-transition:all .9s ease; 
     -ms-transition:all .9s ease;
     width:100%;
 }
-.img-contenedor:hover img {
+.img-contenedor:hover img , .poster:hover{
     -webkit-transform:scale(1.25);
     -moz-transform:scale(1.25);
     -ms-transform:scale(1.25);
@@ -348,4 +352,12 @@ header{
     transform:scale(1.25);
     }
 
-    
+    .contenedor-gallery{
+        margin-left: 30px;
+        margin-right: 30px
+    }
+
+    .pelicula h3{
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
