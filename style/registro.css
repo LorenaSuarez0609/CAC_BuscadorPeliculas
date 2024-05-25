@@ -40,6 +40,11 @@
 .casilla{
     margin: 20px;
 }
+
+.casilla select{
+    color:rgb(245, 237, 237);
+    background-color: rgb(78, 79, 79);
+}
 .boton{
     width: 15rem;
     height:2rem;
@@ -49,5 +54,5 @@
     border-radius: 40px;
     cursor: pointer;
     font-size: 16px;
-    color: #a8a2a2;
+    color: #e2dddd;
 }

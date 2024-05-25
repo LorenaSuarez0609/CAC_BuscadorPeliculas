@@ -47,13 +47,21 @@
                     <input class="name" type="date" placeholder="en formato dd/mm/aa" name="datos" >
                 </div>
                 <div class="casilla">
-                    <input class="name" type="text" placeholder="pais" id="pais" name="pais">
+                    <select class="name" type="text" placeholder="pais" id="pais" name="pais" >
+                        <option value="Argentina">Argentina</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Bolivia">Bolivia</option>
+                    </select>
                 </div>
                 
                 <input class="boton" type="button" onclick="return validar(this.form)" type="submit" value="Registrarme">
             </form>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

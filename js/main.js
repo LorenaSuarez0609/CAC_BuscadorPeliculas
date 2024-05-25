@@ -1,5 +1,6 @@
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    console.log(this);
     if (validar(this)) {
         this.submit();
     }
@@ -7,55 +8,63 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 
 function limpiarError() {
     var errores = document.getElementsByClassName('error');
-    for ( let i=0; i<errores.length; i++){
+    for ( let i = 0; i< errores.length; i++ ){
         errores[i].innerHTML = '';
     }
     limpiarError();
 }
 
+
 function validar(formulario) {
-
-    var expReg = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
-
+    //variable para el campo email
+    var expReg =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/
+    //valido el nombre
     if(formulario.name.value.length == 0){
-        alert('Su Registro es incorrecto, faltan datos o datos incorrectos en Nombre');
-        document.getElementById('errorName').innerText = "Completar Campo";
+        mostrarAlerta('Su Registro es incorrecto, falta Nombre');
+        document.getElementsByClassName('errorName').innerText = "Completar Campo";
         formulario.name.focus();
         return false
     } else{
-        document.getElementById('errorName').innerText = "Campo Correcto";
+        document.getElementsByClassName('errorName').innerText = "Campo Correcto";
     }
-
+    //valido el apellido
     if(formulario.lastName.value.length == 0){
-        alert('Su Registro es incorrecto, faltan datos o datos incorrectos en apellido')
-        document.getElementById('errorLastName').innerText = "completar campo";
+        mostrarAlerta('Su Registro es incorrecto, falta Apellido');
+        document.getElementsByClassName('errorLastName').innerText = "Completar campo";
         formulario.lastName.focus();
         return false
     }else{
-        document.getElementById('errorLastName').innerText = "Campo Correcto";
+        document.getElementsByClassName('errorLastName').innerText = "Campo Correcto";
     }
-
+    //valido email
     if(!expReg.test(formulario.email.value)) {
-        document.getElementById('errorEmail').innerText = "ingresar un email valido";
+        mostrarAlerta('Su Registro es incorrecto, ingrese un mail valido');
+        document.getElementsByClassName('errorEmail').innerText = "ingresar un email valido";
         formulario.email.focus();
         return false;
+    }else{
+        document.getElementsByClassName('errorEmail').innerText = "Campo Correcto";
     }
-
+    //validar password
     if(formulario.password.value.trim().length ==0) {
-        document.getElementById('errorPassword').innerText = 'Ingresar una contraseña valida';
+        mostrarAlerta('Su Registro es incorrecto, Ingresar una contraseña valida');
+        document.getElementsByClassName('errorPassword').innerText = 'Ingresar una contraseña valida';
         formulario.password.focus();
         return false;
     }
-
+    //contraseñass iguales
     if (formulario.password.value != formulario.confirmarPassword.value){
-        document.getElementById('confirmarErrorPassword').innerText = 'Las contraseñas no son iguales';
+        mostrarAlerta('Su Registro es incorrecto, Las contraseñas no son iguales');
+        document.getElementsByClassName('confirmarErrorPassword').innerText = 'Las contraseñas no son iguales';
         formulario.confirmarPassword.focus();
+        return false;
+    }else{
+        document.getElementsByClassName('errorEmail').innerText = "Campo Correcto";
     }
-
-    alert('se genero registro correctamente');
+    mostrarAlerta("Gracias, Se ha registrado Correctamente!")
     return true;
 }
 
-function mostrarAlerta() {
-    Swal.fire("Se ha guardado tu confirmacion, Gracias!");
+function mostrarAlerta(mensaje) {
+    Swal.fire(mensaje);
 }
