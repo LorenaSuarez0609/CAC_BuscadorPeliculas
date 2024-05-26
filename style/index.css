@@ -263,6 +263,7 @@ header{
     .footer{
         background-color: var(--bgprimary);
         height: 15vh;
+        
         ul{
             padding-top: 20px;
             display: flex;
@@ -362,11 +363,15 @@ header{
         font-size: 1.2rem;
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 800px){
         .poster{
             width: 70vh;
             height: 70vw;
         }
+        .footer{
+            font-size: 0.5rem;
+            height: 20vh;
+            
 
     }
     
