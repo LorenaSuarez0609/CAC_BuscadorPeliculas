@@ -52,6 +52,13 @@ function validar(formulario) {
         formulario.password.focus();
         return false;
     }
+    //validacio de pais
+    if(formulario.pais.value==''){
+        mostrarAlerta('Su Registro es incorrecto, Ingresar un pais');
+        document.getElementsByClassName('errorPais').innerText = 'Ingresar un pais';
+        formulario.pais.focus();
+        return false;
+    }
     //contraseñass iguales
     if (formulario.password.value != formulario.confirmarPassword.value){
         mostrarAlerta('Su Registro es incorrecto, Las contraseñas no son iguales');
@@ -60,6 +67,12 @@ function validar(formulario) {
         return false;
     }else{
         document.getElementsByClassName('errorEmail').innerText = "Campo Correcto";
+    }
+    if(!formulario.terminos.checked){
+        mostrarAlerta('Su Registro es incorrecto, terminos no esta confirmado');
+        document.getElementsByClassName('confirmarTerminos').innerText = 'debe confirmar terminos';
+        formulario.terminos.focus();
+        return false;
     }
     mostrarAlerta("Gracias, Se ha registrado Correctamente!")
     return true;
