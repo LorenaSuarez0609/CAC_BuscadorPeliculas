@@ -1,5 +1,5 @@
-var nombreUsuario = "nombre";
-var password = 123456;
+var nombreUsuario = "nombre"
+var password = "123456"
 
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -17,32 +17,38 @@ function limpiarError() {
     limpiarError();
 }
 
-
-function validar(formulario) {
-        //valido el nombre
-        if(formulario.name.value != nombreUsuario){
-            mostrarAlerta('Su Registro es incorrecto, falta Nombre');
-            //document.getElementsByClassName('errorName').innerText = "Completar Campo";
-            //formulario.name.focus();
-            return false
-        } else{
-            document.getElementsByClassName('errorName').innerText = "Campo Correcto";
+function mostrarAlerta(titulo, mensaje, tipo,campoFocus) {
+    Swal.fire({
+        title: titulo,
+        text: mensaje,
+        icon: tipo, // 'success', 'error', 'warning', 'info'
+        confirmButtonText: 'Aceptar'
+    }).then(() => {
+        if (campoFocus) {
+            campoFocus.focus();
         }
-        console.log(formulario.password.value);
-        //validar password
-        if(parseInt(formulario.password.value) != password) {
-            console.log(formulario.password.value);
-            mostrarAlerta('Su Registro es incorrecto, Ingresar una contraseña valida');
-            //document.getElementsByClassName('errorPassword').innerText = 'Ingresar una contraseña valida';
-            //formulario.password.focus();
-            return false;
-        }
-        mostrarAlerta("Gracias, Se ha logueado Correctamente!")
-        return true;
-    }
+    });
+}
 
+/*
 function mostrarAlerta(mensaje) {
     Swal.fire(mensaje);
-}
-    
+}*/
 
+function validar(formulario) {
+    //valido el nombre
+    if(formulario.nombre.value != nombreUsuario){
+        mostrarAlerta('Error','Error al iniciar sesión,  Credenciales Incorrectas', 'error', formulario.nombre);
+        document.getElementsByClassName('errorName').innerText = 'Credenciales Incorrectas';
+        return false
+    } 
+    //validar password
+    if(formulario.password.value != password) {
+        mostrarAlerta('Error','Error al iniciar sesión,   Credenciales Incorrectas', 'error', formulario.password);
+        document.getElementsByClassName('errorPassword').innerText = 'Credenciales Incorrectas';
+        formulario.password.focus();
+        return false;
+    }
+    mostrarAlerta('Éxito',"Gracias, Se ha logueado Correctamente!", "success")
+    setTimeout(() => { return true; }, 5000);
+}
