@@ -22,14 +22,14 @@
     </header>
     <main class="main" id="main">
         <section class="logueo">
-            <form action method="get" class="form-login">
+            <form action method="get" class="form-login" id="myForm">
                 <h2 class="titulo-iniciar">iniciar sesion</h2>
                 <div class="casilla">
                     <input class="name" type="text" placeholder="nombre" id="nombre">
                     <span id="errorName" class="error"></span>
                 </div>
                 <div class="casilla">
-                    <input class="password" type="password" placeholder="password" id="password" >
+                    <input class="name" type="password" placeholder="password" id="password" >
                     <span id="errorPassword" class="error"></span>
                 </div>
                 <input class="boton" onclick="return validar(this.form)" type="submit" placeholder="Registrarse">

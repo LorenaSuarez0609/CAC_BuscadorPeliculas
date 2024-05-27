@@ -44,6 +44,12 @@
     background: transparent;
     text-align: center;
   }
+  .name:focus {
+    border-color: #66ccff;
+    box-shadow: 0 0 5px #66ccff;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+}
   .boton{
     width: 15rem;
     height:2rem;
