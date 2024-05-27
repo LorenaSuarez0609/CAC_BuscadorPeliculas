@@ -58,3 +58,7 @@ const cargarPeliculas = async() => {
     
 }
 cargarPeliculas();
+
+function Buscador(){
+    window.open("../pages/buscador.html")
+}

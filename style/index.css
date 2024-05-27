@@ -152,16 +152,6 @@ header{
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
-
-            form{
-                .searchInput{
-                    width:20rem;
-                    height:2.25rem;
-                    font-size: 1rem;
-                    border-radius: 1rem;
-                    padding: 0 0.75rem;
-                    border: 2px solid white;
-                }
                 .searchButton{
                     width:8rem;
                     height:2.25rem;
@@ -189,9 +179,8 @@ header{
                 height: 2px;
                 background-color: var(--bgprimary);
             }
-        }
+
         .gallery{
-            
             div {
             padding-top: 30px;
             display: grid;
