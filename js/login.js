@@ -30,11 +30,6 @@ function mostrarAlerta(titulo, mensaje, tipo,campoFocus) {
     });
 }
 
-/*
-function mostrarAlerta(mensaje) {
-    Swal.fire(mensaje);
-}*/
-
 function validar(formulario) {
     //valido el nombre
     if(formulario.nombre.value != nombreUsuario){

@@ -59,6 +59,14 @@ function validar(formulario) {
         formulario.pais.focus();
         return false;
     }
+    //validar fecha
+     //validación de fecha
+    if (formulario.fecha.value == ''){  
+        mostrarAlerta('Su Registro es incorrecto, Seleccione una fecha válida');
+        document.getElementsByClassName('errorFecha').innerText = 'Seleccione una fecha válida';
+        formulario.fecha.focus();
+        return false;
+    }
     //contraseñass iguales
     if (formulario.password.value != formulario.confirmarPassword.value){
         mostrarAlerta('Su Registro es incorrecto, Las contraseñas no son iguales');
@@ -74,7 +82,7 @@ function validar(formulario) {
         formulario.terminos.focus();
         return false;
     }
-    mostrarAlerta("Gracias, Se ha registrado Correctamente!")
+    Swal.fire("Gracias, Se ha registrado Correctamente!")
     return true;
 }
 
