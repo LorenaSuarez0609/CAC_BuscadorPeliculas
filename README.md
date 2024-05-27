@@ -8,7 +8,7 @@ Integrantes:
 3. Dante Alvarez
 4. Hernan Mamani
 5. Maximiliano Peralta
-6. Pablo Suarez Lapalma
+6. Pablo Suárez Lapalma
 
 
 
