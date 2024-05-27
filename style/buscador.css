@@ -19,14 +19,15 @@
     padding: 10px;
     font-size: 16px;
     color:black;
+    border-radius: 10px;
   }
   
   button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #740202;
-    color: #2c2b2b;
-    border: none;
+    color: #eae3e3;
+    border-radius: 10px;
     cursor: pointer;
   }
   
