@@ -52,7 +52,14 @@ function validar(formulario) {
         formulario.password.focus();
         return false;
     }
-    //validacio de pais
+    //validación de fecha
+    if (formulario.fecha.value == ''){  
+        mostrarAlerta('Su Registro es incorrecto, Seleccione una fecha válida');
+        document.getElementsByClassName('errorFecha').innerText = 'Seleccione una fecha válida';
+        formulario.fecha.focus();
+        return false;
+    }
+    //validacion de pais
     if(formulario.pais.value==''){
         mostrarAlerta('Su Registro es incorrecto, Ingresar un pais');
         document.getElementsByClassName('errorPais').innerText = 'Ingresar un pais';

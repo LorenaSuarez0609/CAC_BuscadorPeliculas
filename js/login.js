@@ -69,7 +69,7 @@ function validar(formulario) {
         Swal.fire(mensaje);
     }
     
-
+}
 function mostrarAlerta(mensaje) {
     Swal.fire(mensaje);
 }
