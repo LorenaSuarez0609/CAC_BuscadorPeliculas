@@ -64,35 +64,15 @@
     min-height:70vh;
   }
 
-  @media (max-width: 800px){
-    .header{
-      height: 15vh;
-      width:150VW;
-      nav{
-          font-size: 0.8rem;
+  @media (max-width: 550px){
+  .titulo-tendencias h2{
+        font-size: 16px;
       }
-    
-  .titulo-tendencias{
-        font-size: 0.5rem;
+      .container h1{
+        font-size: 16px;
       }
-    }
-    .footer {
-        display: flex;
-        flex-direction: column;
-        height: 30vh;
+      #searchButton, #searchInput{
+        font-size: 12px;
       }
-      .footer{
-        height: 35vh;
-        
-        ul{
-            display:grid;
-            gap:1rem;
-            font-size: 0.8rem;
-        }
-        a{
-            display: flex;
-            justify-content: flex-start;
-        }
-    
-}
+      
     }

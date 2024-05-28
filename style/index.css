@@ -361,49 +361,41 @@ header{
     }
 
 
-
-@media (max-width: 800px){
-        .poster{
-            width: 70vh;
-            height: 70vw;
-        }
-        .footer {
-            display: flex;
-            flex-direction: column;
-            
-            height: 30vh;
-            
-        }
-        .footer ul{
-            font-size: 0.75rem;
-
-        }
-}
-@media (max-width: 450px){
+@media (max-width: 550px){
 
     header{
-        height: 15vh;
+        height: 30vh;
         width:150VW;
+        display: flex;
         nav{
             font-size: 0.8rem;
         }
+        .logo{
+            align-items: center;
+            padding-bottom: 5px;
+            flex-direction:row;
+        }
+        ul{
+            display: block;
+            justify-content: flex-end;
+        }
     }
-
     .footer{
-        height: 35vh;
-        
+        height: 45vh;
         ul{
             display:grid;
             gap:1rem;
             font-size: 0.8rem;
-        }
-        a{
-            display: flex;
+            }
+        li a{
             justify-content: flex-start;
         }
-
+    }
+    .footer a{
+        display: flex;
+        justify-content: flex-end;
     }
 }
-            
-            
-            
+
+
+
