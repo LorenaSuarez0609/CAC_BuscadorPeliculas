@@ -15,7 +15,7 @@
   }
   
   input[type="text"] {
-    width: 300px;
+    width: 60%;
     padding: 10px;
     font-size: 16px;
     color:black;
@@ -37,7 +37,7 @@
   }
   
   .movie {
-    min-height: 200px;
+    min-height: 200%;
     margin-bottom: 10px;
     padding: 10px;
     background-color: #f5f5f5;
@@ -63,3 +63,36 @@
   .main{
     min-height:70vh;
   }
+
+  @media (max-width: 800px){
+    .header{
+      height: 15vh;
+      width:150VW;
+      nav{
+          font-size: 0.8rem;
+      }
+    
+  .titulo-tendencias{
+        font-size: 0.5rem;
+      }
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+      }
+      .footer{
+        height: 35vh;
+        
+        ul{
+            display:grid;
+            gap:1rem;
+            font-size: 0.8rem;
+        }
+        a{
+            display: flex;
+            justify-content: flex-start;
+        }
+    
+}
+    }
