@@ -380,6 +380,11 @@ header{
             justify-content: flex-end;
         }
     }
+    .poster{
+        width: 7vh;
+        height: 80vw;
+    }
+
     .footer{
         height: 45vh;
         ul{
