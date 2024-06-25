@@ -1,33 +1,45 @@
 .titulo-tendencias{
     padding-top: 30px;
-    text-align: center;
+    padding-left: 40px;
     padding-bottom: 30px;
+    color: #f3ecec;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 300%;
 }
-.container {
-    
+
+.linea, .logo{
+      text-decoration-line: none;
+      color:white;
+  }
+
+  .container {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
   }
-  
-  h1 {
+h1 {
     color: #f3ecec;
   }
   
-  input[type="text"] {
-    width: 300px;
+#searchInput{
+    width: 60%;
     padding: 10px;
     font-size: 16px;
     color:black;
+    border-radius: 10px;
   }
-  
-  button {
+#searchButton {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #740202;
-    color: #2c2b2b;
-    border: none;
+    color: #eae3e3;
+    border-radius: 10px;
     cursor: pointer;
+  }
+
+.linea-Divisoria{
+    height: 2px;
+    background-color: var(--bgprimary);
   }
   
   #results {
@@ -61,4 +73,25 @@
   }
   .main{
     min-height:70vh;
+  }
+
+  .listado {
+    padding-left: 40px;
+  }
+  .contenedor-peliculas, .contenedor-listado{
+    margin-right: 30px;
+    margin-left:30px;
+  }
+
+  @media (max-width: 550px){
+    .titulo-tendencias h2{
+          font-size: 16px;
+        }
+        .container h1{
+          font-size: 16px;
+        }
+        #searchButton, #searchInput{
+          font-size: 12px;
+        }
+        
   }
