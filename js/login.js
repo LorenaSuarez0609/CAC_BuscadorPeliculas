@@ -1,5 +1,4 @@
 const localhost= 'http://localhost:8080'
-const localhost = 'http://34.229.205.194:8080';
 
 var nombreUsuario = "nombre";
 var password = "123456"
