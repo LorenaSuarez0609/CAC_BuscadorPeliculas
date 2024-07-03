@@ -1,3 +1,5 @@
+const localhost= 'http://localhost:8080'
+
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
     console.log(this);
@@ -15,7 +17,7 @@ function limpiarError() {
 }
 
 
-function validar(formulario) {
+async function validar(formulario) {
     //variable para el campo email
     var expReg =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/
     //valido el nombre
@@ -82,9 +84,50 @@ function validar(formulario) {
         formulario.terminos.focus();
         return false;
     }
-    Swal.fire("Gracias, Se ha registrado Correctamente!")
+    const nombre = formulario.name.value;
+    const apellido = formulario.lastName.value;
+    const email = formulario.email.value;
+    const password = formulario.password.value;
+    const pais = formulario.pais.value;
+    const fechaNacimiento = formulario.fecha.value;
+    //Parsea la fecha al formato aceptado por el Backend
+    let date = new Date(fechaNacimiento);
+    let formattedDate = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
+    
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', `${localhost}/users`, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    try{
+        xhr.send(JSON.stringify({
+            nombre: nombre,
+            apellido: apellido,
+            email: email,
+            password: password,
+            pais: pais,
+            fechaNacimiento: formattedDate
+        }));
+    }
+    catch (e){
+        console.error('Error al agregar usuario:', e);
+    }
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4){
+            if(xhr.status === 200) {
+                Swal.fire("Gracias, Se ha registrado Correctamente!")
+                console.log('Usuario agregado correctamente:', xhr.responseText);
+            }
+            else {
+                Swal.fire("Hubo un error al registrar el usuario, intente nuevamente")
+                console.error(`Error al agregar el usuario: ${xhr.status} ${xhr.statusText}`);
+            }
+        }
+        
     return true;
+    
 }
+}
+
+
 
 function mostrarAlerta(mensaje) {
     Swal.fire(mensaje);
