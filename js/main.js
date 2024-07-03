@@ -18,6 +18,7 @@ function limpiarError() {
 
 
 async function validar(formulario) {
+async function validar(formulario) {
     //variable para el campo email
     var expReg =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/
     //valido el nombre
@@ -125,7 +126,11 @@ async function validar(formulario) {
     return true;
     
 }
+    
 }
+}
+
+
 
 
 
