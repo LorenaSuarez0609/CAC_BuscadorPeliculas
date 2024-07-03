@@ -1,5 +1,9 @@
-var nombreUsuario = "nombre"
+const localhost= 'http://localhost:8080'
+const amazonec2 = 'http://34.229.205.194:8080';
+
+var nombreUsuario = "nombre";
 var password = "123456"
+
 
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -32,18 +36,37 @@ function mostrarAlerta(titulo, mensaje, tipo,campoFocus) {
 
 function validar(formulario) {
     //valido el nombre
-    if(formulario.nombre.value != nombreUsuario){
-        mostrarAlerta('Error','Error al iniciar sesión,  Credenciales Incorrectas', 'error', formulario.nombre);
-        document.getElementsByClassName('errorName').innerText = 'Credenciales Incorrectas';
-        return false
-    } 
-    //validar password
-    if(formulario.password.value != password) {
-        mostrarAlerta('Error','Error al iniciar sesión,   Credenciales Incorrectas', 'error', formulario.password);
-        document.getElementsByClassName('errorPassword').innerText = 'Credenciales Incorrectas';
-        formulario.password.focus();
-        return false;
+    const nombreUsuario = String(formulario.nombre.value);
+    const encodedNombreUsuario = encodeURIComponent(nombreUsuario);
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `${amazonec2}/users?nombre=${encodedNombreUsuario}`, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4){
+            if (xhr.status === 200) {
+            const users = JSON.parse(xhr.responseText);
+            if (users.length === 0) {
+                mostrarAlerta('Error', 'Error al iniciar sesión, Credenciales Incorrectas', 'error', formulario.nombre);
+                document.getElementsByClassName('errorName')[0].innerText = 'Credenciales Incorrectas';
+                return false;
+            }
+            else {
+                users.forEach(user => {
+                    if(formulario.password.value != user.password){
+                        mostrarAlerta('Error','Error al iniciar sesión,  Credenciales Incorrectas', 'error', formulario.nombre);
+                        document.getElementsByClassName('errorName').innerText = 'Credenciales Incorrectas';
+                        return false
+                    }
+                    mostrarAlerta('Éxito',"Gracias, Se ha logueado Correctamente!", "success")
+                    setTimeout(() => { return true; }, 5000);
+                });
+            }
+        }
+        else {
+            mostrarAlerta('Error','Error al iniciar sesión,  Credenciales Incorrectas', 'error', formulario.nombre);
+            document.getElementsByClassName('errorName').innerText = 'Credenciales Incorrectas';
+            console.error('Error fetching users:', xhr.responseText);
+        }
     }
-    mostrarAlerta('Éxito',"Gracias, Se ha logueado Correctamente!", "success")
-    setTimeout(() => { return true; }, 5000);
+    };
 }

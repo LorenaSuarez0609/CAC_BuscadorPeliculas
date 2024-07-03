@@ -21,14 +21,14 @@ h1 {
     color: #f3ecec;
   }
   
-#searchInput{
+.searchInput{
     width: 60%;
     padding: 10px;
     font-size: 16px;
     color:black;
     border-radius: 10px;
   }
-#searchButton {
+#addMovieButton {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #740202;

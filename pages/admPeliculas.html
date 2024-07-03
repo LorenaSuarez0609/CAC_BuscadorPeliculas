@@ -33,12 +33,12 @@
                 <p class="listado">En esta seccion se podra llevar a cabo la gestion de las peliculas del portal</p>
                     <form class="contenedor-peliculas">
                         <br>
-                        <input type="text" id="searchInput" placeholder="Titulo">
-                        <input type="text" id="searchInput" placeholder="Genero">
-                        <input type="text" id="searchInput" placeholder="Duracion">
+                        <input type="text" id="titulo" class="searchInput" placeholder="Titulo">
+                        <input type="text" id="genero" class="searchInput" placeholder="Genero">
+                        <input type="text" id="duracion" class="searchInput" placeholder="Duracion">
                         <br>
-                        <input type="text" id="searchInput" placeholder="Imagen">
-                        <button id="searchButton">Agregar Pelicula</button>
+                        <input type="text" id="imagen" class="searchInput" placeholder="Imagen">
+                        <button id="addMovieButton">Agregar Pelicula</button>
                         <div id="results"></div>
                     </form>
                 </div>
@@ -55,6 +55,9 @@
                         <th> Genero</th>
                         <th> Imagen</th>
                     </thead>
+                    <tbody>
+                        <!-- Aquí se agregarán las filas de películas -->
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -72,7 +75,6 @@
             <img src="../asset/flecha-hacia-arriba.png" alt="Flecha hacia arriba">
         </a>
     </footer>
-    <script src="../js/admPeliculas.js"></script>
-</body>
+    <script type="module" src="/js/admin.js"></script></body>
 </html>
 
