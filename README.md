@@ -20,10 +20,11 @@ Para la parte Front End:
 5. API themoviedb
 
 Para el Back End:
-1.JAVA
-2.MySQL
-3.Docker
+1. JAVA
+2. MySQL
+3. Docker
 4. Apache TomCat
+
 
 ### Enlace al deployment en Vercel del Frontend: https://cac-buscador-peliculas.vercel.app/
 ### Enlace del vídeo de demostración de YouTube: https://www.youtube.com/watch?v=IICL84Ysk-U
