@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const genero = document.getElementById('genero').value;
         const imagen = document.getElementById('imagen').value;
 
+        if (!titulo || !duracion || !genero || !imagen) {
+            console.error('Faltan datos');
+            return;
+        }
+
         fetch(`${localhost}/movies`, {
             method: 'POST',
             headers: {
